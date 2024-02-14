@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>TensorSearch: AI Search and Assistant for any data</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                salad: '#d1f800',
+                salad_light: '#e5fc65',
+                violet: '#F800D1',
+                gray_persic: '#fffcf7',
+              },
+              minHeight: {
+                'screen-minus-32': 'calc(100vh - 32rem)',
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+        .font-poppins {
+          font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen justify-between bg-gray_persic font-poppins">
+    <nav class="bg-zinc-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white">
+            <a href="#" class="text-xl font-bold font-poppins flex item-center">
+                <img src="logo.svg" alt="TensorSearch" class="pr-2">
+                <span class="pl">TensorSearch</span>
+            </a>
+            </div>
+            <div>
+            <ul class="flex space-x-4">
+                <!-- <li><a href="#" class="text-zinc-50 hover:text-zinc-400">Home</a></li>
+                <li><a href="#" class="text-zinc-50 hover:text-zinc-400">Services</a></li>
+                <li><a href="#" class="text-zinc-50 hover:text-zinc-400">About</a></li>
+                <li><a href="#" class="text-zinc-50 hover:text-zinc-400">Contact</a></li> -->
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="min-h-screen-minus-32 flex items-center justify-center flex-grow container mx-auto flex-col text-center p-5 font-poppins bg-no-repeat bg-left-top" style="background-image: url(back.svg)">
+        <h1 class="text-4xl sm:text-6xl font-bold mb-4">AI Search and Assistant for any data</h1>
+        <p class="text-xl sm:text-2xl mb-8">
+            Revolutionizing data management, this tool seamlessly indexes information from both internal and external sources, creating a comprehensive knowledge repository.
+            TensorSearch powers AI applications with deployment flexibility on our Cloud or your infrastructure
+            <!-- Optimized for e-commerce, TensorSearch provides an intelligent alternative to traditional, less effective chatbots, enhancing customer interaction and support. -->
+        </p>
+        <a href="" class="bg-salad text-zinc-800 hover:bg-zinc-800 hover:text-salad text-white font-bold py-2 px-4 rounded-2xl font-poppins border-2 border-zinc-800 hover:border-zinc-50">
+            Contact us
+        </a>
+    </main>
+
+    <section class="bg-white py-8 border-t">
+        <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Available Subscription Plans</h1>
+            <p class="text-center">
+                We offer a subscription + consumption model.<br>
+                Select the tier that fits your needs most and pay as you go. Scale instantly or upgrade anytime for advanced features.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
+                <!-- Feature Column -->
+                <div class="w-full sm:w-1/4 mx-auto sm:mx-0">
+                    <div class="mb-2 bg-gray-100 p-4 text-black text-lg font-bold text-center border-b-4">Features</div>
+                    <ul class="text-sm font-bold">
+                        <li class="bg-white p-4 border-b">Integrations</li>
+                        <li class="bg-gray-50 p-4 border-b">LLM</li>
+                        <li class="bg-white p-4 border-b">Consumption (cost per 1000 tokens)</li>
+                        <li class="bg-gray-50 p-4 border-b">AI Capabilities Tasks</li>
+                        <li class="bg-white p-4 border-b">VectorDB</li>
+                        <li class="bg-gray-50 p-4 border-b">Support</li>
+                        <li class="bg-white p-4 border-b">$/Month</li>
+                    </ul>
+                </div>
+                <!-- Starter Column -->
+                <div class="w-full sm:w-1/4 mx-auto sm:mx-0">
+                    <div class="mb-2 bg-salad_light p-4 text-gray-800 text-lg font-bold text-center border-b-4">STARTER</div>
+                    <ul class="text-center text-sm">
+                        <li class="bg-white p-4 border-b">API / SDK</li>
+                        <li class="bg-gray-50 p-4 border-b">Azure ChatGPT / Mixtral-8x7B</li>
+                        <li class="bg-white p-4 border-b">$0.008</li>
+                        <li class="bg-gray-50 p-4 border-b">AI Search / RAG & QA</li>
+                        <li class="bg-white p-4 border-b">Cloud</li>
+                        <li class="bg-gray-50 p-4 border-b">Email</li>
+                        <li class="bg-white p-4 border-b"><span class="font-bold">99</span></li>
+                    </ul>
+                </div>
+                <!-- Growth Column -->
+                <div class="w-full sm:w-1/4 mx-auto sm:mx-0">
+                    <div class="mb-2 bg-salad p-4 text-gray-800 text-lg font-bold text-center border-b-4">GROWTH</div>
+                    <ul class="text-center text-sm">
+                        <li class="bg-white p-4 border-b">API / SDK</li>
+                        <li class="bg-gray-50 p-4 border-b">Azure ChatGPT / Mixtral-8x7B</li>
+                        <li class="bg-white p-4 border-b">$0.008</li>
+                        <li class="bg-gray-50 p-4 border-b">AI Search / RAG & QA</li>
+                        <li class="bg-white p-4 border-b">Cloud</li>
+                        <li class="bg-gray-50 p-4 border-b">Priority Email</li>
+                        <li class="bg-white p-4 border-b"><span class="font-bold">550</span></li>
+                    </ul>
+                </div>
+                <!-- Enterprise Column -->
+                <div class="w-full sm:w-1/4 mx-auto sm:mx-0">
+                    <div class="mb-2 bg-gray-800 p-4 text-white text-lg font-bold text-center border-b-4">ENTERPRISE</div>
+                    <ul class="text-center text-sm">
+                        <li class="bg-white p-4 border-b">API / SDK / Custom solutions</li>
+                        <li class="bg-gray-50 p-4 border-b">Azure ChatGPT & Mixtral-8x7B</li>
+                        <li class="bg-white p-4 border-b">$0.005</li>
+                        <li class="bg-gray-50 p-4 border-b">AI Search / RAG & QA / e-commerce Assistant</li>
+                        <li class="bg-white p-4 border-b">Cloud / On-Prem</li>
+                        <li class="bg-gray-50 p-4 border-b">24/7 Support</li>
+                        <li class="bg-white p-4 border-b">Contact us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+    <!-- Footer -->
+    <footer class="bg-zinc-800 text-white text-center p-5">
+        © 2024 TensorSearch. All Rights Reserved.
+    </footer>
+</body>
+</html>
