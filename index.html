@@ -1,143 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>TensorSearch: AI Search and Assistant for any data</title>
-    <link rel="icon" href="icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                salad: '#d1f800',
-                salad_light: '#e5fc65',
-                violet: '#F800D1',
-                gray_persic: '#fffcf7',
-              },
-              minHeight: {
-                'screen-minus-32': 'calc(100vh - 32rem)',
-              }
-            }
-          }
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>TensorSearch | AI Fact-Checking, RAG & LLM Consulting</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="TensorSearch provides AI-powered fact-checking (FactCheck) and strategic consulting for Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems. We help build trust and accuracy in enterprise AI.">
+  <meta name="keywords" content="AI consulting, LLM, RAG, Fact-Checking, AI Audit, Enterprise AI, TensorSearch, AI Cybersecurity, Retrieval-Augmented Generation">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tensorsearch.com/">
+  <meta property="og:title" content="TensorSearch | AI Fact-Checking, RAG & LLM Consulting">
+  <meta property="og:description" content="TensorSearch provides AI-powered fact-checking (FactCheck) and strategic consulting for Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems.">
+  <meta property="og:image" content="https://tensorsearch.com/assets/back_b1.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tensorsearch.com/">
+  <meta property="twitter:title" content="TensorSearch | AI Fact-Checking, RAG & LLM Consulting">
+  <meta property="twitter:description" content="TensorSearch provides AI-powered fact-checking (FactCheck) and strategic consulting for Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems.">
+  <meta property="twitter:image" content="https://tensorsearch.com/assets/back_b1.jpg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TensorSearch",
+    "url": "https://tensorsearch.com/",
+    "logo": "https://tensorsearch.com/logo.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@tensorsearch.com",
+      "contactType": "Sales"
+    },
+    "description": "TensorSearch specializes in building trust and accuracy in AI systems through advanced fact-checking products and strategic consulting for LLMs and RAG.",
+    "knowsAbout": ["Artificial Intelligence", "Large Language Models", "Retrieval-Augmented Generation", "Fact-Checking", "Cybersecurity"],
+    "service": [
+      {
+        "@type": "Service",
+        "name": "FactCheck for Business",
+        "description": "An automated verification system that cross-references LLM-generated answers against source documents to ensure accuracy and build trust in RAG workflows.",
+        "provider": {
+          "@type": "Organization",
+          "name": "TensorSearch"
         }
-      </script>
-    <style>
-        .font-poppins {
-          font-family: 'Poppins', sans-serif;
+      },
+      {
+        "@type": "Service",
+        "name": "Strategic AI Consulting",
+        "description": "Expert guidance on AI adoption, from auditing systems to implementing robust, scalable, and trustworthy AI solutions.",
+        "provider": {
+          "@type": "Organization",
+          "name": "TensorSearch"
         }
-    </style>
+      }
+    ]
+  }
+  </script>
 </head>
-<body class="flex flex-col h-screen justify-between bg-gray_persic font-poppins">
-    <nav class="bg-zinc-800 p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-white">
-            <a href="#" class="text-xl font-bold font-poppins flex item-center">
-                <img src="logo.svg" alt="TensorSearch" class="pr-2">
-                <span class="pl">TensorSearch</span>
-            </a>
-            </div>
-            <div>
-            <ul class="flex space-x-4">
-                <!-- <li><a href="#" class="text-zinc-50 hover:text-zinc-400">Home</a></li>
-                <li><a href="#" class="text-zinc-50 hover:text-zinc-400">Services</a></li>
-                <li><a href="#" class="text-zinc-50 hover:text-zinc-400">About</a></li>
-                <li><a href="#" class="text-zinc-50 hover:text-zinc-400">Contact</a></li> -->
-            </ul>
-            </div>
-        </div>
-    </nav>
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Header -->
+  <header class="sticky top-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <a href="#" class="flex items-center space-x-3">
+        <img src="logo.svg" alt="TensorSearch logo" class="h-8 w-auto"/>
+        <span class="font-semibold text-2xl text-gray-800">TensorSearch</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-10 text-lg">
+        <a href="#product" class="hover:text-sky-600">Product</a>
+        <a href="#consulting" class="hover:text-amber-600">Consulting</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="md:hidden p-2 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile nav -->
+    <div id="mobile-nav" class="md:hidden hidden border-t border-gray-100">
+      <div class="px-5 py-4 space-y-2">
+        <a href="#product" class="mobile-nav-link block py-2 hover:text-indigo-600">Product</a>
+        <a href="#consulting" class="mobile-nav-link block py-2 hover:text-indigo-600">Consulting</a>
+        <a href="#contact" class="mobile-nav-link block py-2 hover:text-indigo-600">Contact</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main class="min-h-screen-minus-32 flex items-center justify-center flex-grow container mx-auto flex-col text-center p-5 font-poppins bg-no-repeat bg-left-top" style="background-image: url(back.svg)">
-        <h1 class="text-4xl sm:text-6xl font-bold mb-4">AI Search and Assistant for any data</h1>
-        <p class="text-xl sm:text-2xl mb-8">
-            Revolutionizing data management, this tool seamlessly indexes information from both internal and external sources, creating a comprehensive knowledge repository.
-            TensorSearch powers AI applications with deployment flexibility on our Cloud or your infrastructure
-            <!-- Optimized for e-commerce, TensorSearch provides an intelligent alternative to traditional, less effective chatbots, enhancing customer interaction and support. -->
-        </p>
-        <a href="" class="bg-salad text-zinc-800 hover:bg-zinc-800 hover:text-salad text-white font-bold py-2 px-4 rounded-2xl font-poppins border-2 border-zinc-800 hover:border-zinc-50">
-            Contact us
-        </a>
-    </main>
+  <!-- Hero & Expertise -->
+  <section class="bg-gray-50 py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl sm:text-6xl font-bold text-gray-900 mb-6 tracking-tight">Building Trust in AI</h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto text-gray-600">We provide advanced tools and expert guidance to ensure your AI systems are accurate, reliable, and aligned with your business goals.</p>
+      </div>
 
-    <section class="bg-white py-8 border-t">
-        <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Available Subscription Plans</h1>
-            <p class="text-center">
-                We offer a subscription + consumption model.<br>
-                Select the tier that fits your needs most and pay as you go. Scale instantly or upgrade anytime for advanced features.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-                <!-- Feature Column -->
-                <div class="w-full sm:w-1/4 mx-auto sm:mx-0">
-                    <div class="mb-2 bg-gray-100 p-4 text-black text-lg font-bold text-center border-b-4">Features</div>
-                    <ul class="text-sm font-bold">
-                        <li class="bg-white p-4 border-b">Integrations</li>
-                        <li class="bg-gray-50 p-4 border-b">Indexed Data Size</li>
-                        <li class="bg-white p-4 border-b">LLM</li>
-                        <li class="bg-gray-50 p-4 border-b">Consumption (cost per 1000 tokens)</li>
-                        <li class="bg-white p-4 border-b">AI Capabilities Tasks</li>
-                        <li class="bg-gray-50 p-4 border-b">VectorDB</li>
-                        <li class="bg-white p-4 border-b">Support</li>
-                        <li class="bg-gray-50 p-4 border-b">$/Month</li>
-                    </ul>
-                </div>
-                <!-- Starter Column -->
-                <div class="w-full sm:w-1/4 mx-auto sm:mx-0">
-                    <div class="mb-2 bg-salad_light p-4 text-gray-800 text-lg font-bold text-center border-b-4">STARTER</div>
-                    <ul class="text-center text-sm">
-                        <li class="bg-white p-4 border-b">API / SDK</li>
-                        <li class="bg-gray-50 p-4 border-b">1 GB</li>
-                        <li class="bg-white p-4 border-b">Azure ChatGPT / Mixtral-8x7B</li>
-                        <li class="bg-gray-50 p-4 border-b">$0.008</li>
-                        <li class="bg-white p-4 border-b">AI Search / RAG & QA</li>
-                        <li class="bg-gray-50 p-4 border-b">Cloud</li>
-                        <li class="bg-white p-4 border-b">Email</li>
-                        <li class="bg-gray-50 p-4 border-b"><span class="font-bold">99</span></li>
-                    </ul>
-                </div>
-                <!-- Growth Column -->
-                <div class="w-full sm:w-1/4 mx-auto sm:mx-0">
-                    <div class="mb-2 bg-salad p-4 text-gray-800 text-lg font-bold text-center border-b-4">GROWTH</div>
-                    <ul class="text-center text-sm">
-                        <li class="bg-white p-4 border-b">API / SDK</li>
-                        <li class="bg-gray-50 p-4 border-b">50 GB</li>
-                        <li class="bg-white p-4 border-b">Azure ChatGPT / Mixtral-8x7B</li>
-                        <li class="bg-gray-50 p-4 border-b">$0.008</li>
-                        <li class="bg-white p-4 border-b">AI Search / RAG & QA</li>
-                        <li class="bg-gray-50 p-4 border-b">Cloud</li>
-                        <li class="bg-white p-4 border-b">Priority Email</li>
-                        <li class="bg-gray-50 p-4 border-b"><span class="font-bold">550</span></li>
-                    </ul>
-                </div>
-                <!-- Enterprise Column -->
-                <div class="w-full sm:w-1/4 mx-auto sm:mx-0">
-                    <div class="mb-2 bg-gray-800 p-4 text-white text-lg font-bold text-center border-b-4">ENTERPRISE</div>
-                    <ul class="text-center text-sm">
-                        <li class="bg-white p-4 border-b">API / SDK / Custom solutions</li>
-                        <li class="bg-gray-50 p-4 border-b">Unlimited</li>
-                        <li class="bg-white p-4 border-b">Azure ChatGPT / Mixtral-8x7B</li>
-                        <li class="bg-gray-50 p-4 border-b">$0.006</li>
-                        <li class="bg-white p-4 border-b">AI Search / RAG & QA / e-commerce Assistant</li>
-                        <li class="bg-gray-50 p-4 border-b">Cloud / On-Prem</li>
-                        <li class="bg-white p-4 border-b">24/7 Support</li>
-                        <li class="bg-gray-50 p-4 border-b">Contact us</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="grid lg:grid-cols-5 gap-8">
+        <!-- Left Card (Team Background) -->
+        <div class="lg:col-span-3 rounded-2xl shadow-xl overflow-hidden text-white p-10 flex flex-col justify-between min-h-[480px] bg-cover bg-center" style="background-image: url('assets/back_b1.jpg');">
+          <div>
+            <h2 class="text-xs uppercase font-semibold tracking-widest opacity-80">A Team of Experts</h2>
+            <p class="text-4xl font-bold mt-4">Grounded in World-Class AI Research</p>
+          </div>
+          <p class="text-lg mt-4">Our team's expertise is built on the academic rigor of top AI institutions like Skoltech and the Artificial Intelligence Research Institute (AIRI).</p>
         </div>
-    </section>
         
+        <!-- Right Column -->
+        <div class="lg:col-span-2 flex flex-col gap-8">
+          <!-- Expertise Card -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col">
+            <h2 class="text-xs uppercase font-semibold text-gray-600 tracking-widest">Our Expertise</h2>
+            <h3 class="text-2xl font-bold text-gray-900 mt-3 mb-4">Core Capabilities</h3>
+            <ul class="space-y-5 text-gray-700 flex-grow pt-4 text-lg">
+              <li class="flex items-start">
+                <svg class="h-7 w-7 flex-shrink-0 text-sky-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" /></svg>
+                <span>Large Language Models (LLMs) & NLP</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-7 w-7 flex-shrink-0 text-sky-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+                <span>Retrieval-Augmented Generation (RAG)</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-7 w-7 flex-shrink-0 text-sky-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>AI Systems Auditing</span>
+              </li>
+              <li class="flex items-start">
+                  <svg class="h-7 w-7 flex-shrink-0 text-sky-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
+                <span>AI for Cybersecurity</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Project Card -->
+          <div class="bg-gray-800 text-white rounded-2xl shadow-xl p-8">
+            <h2 class="text-xs uppercase font-semibold tracking-widest text-gray-400">TensorSearch in Action</h2>
+            <h3 class="text-2xl font-bold mt-3 mb-4">AI-Powered Cybersecurity</h3>
+            <p class="text-gray-300">We are helping develop a next-gen AI cybersecurity assistant. Contact us to learn more about our approach to mission-critical AI.</p>
+            <a href="#contact" class="inline-block font-semibold text-amber-400 hover:text-amber-300 mt-4">
+              Contact Us to Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-zinc-800 text-white text-center p-5">
-        © 2024 TensorSearch. All Rights Reserved.
-    </footer>
+  <!-- Product Section (FactCheck) -->
+  <section id="product" class="py-20 sm:py-24 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center lg:text-left lg:w-2/3 mb-12">
+        <h2 class="text-xs uppercase font-semibold text-sky-600 tracking-widest">Product</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4">FactCheck for Business</h3>
+        <p class="text-lg text-gray-600">Automate quality control for your LLM applications. Our tool verifies generated content against source documents to eliminate hallucinations and build user trust.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-sky-50 p-8 rounded-xl">
+          <h4 class="font-semibold text-xl text-sky-900 mb-3">Accelerate RAG</h4>
+          <p class="text-gray-600">Eliminate time-consuming manual fact-checking and verification to speed up your workflows.</p>
+        </div>
+        <div class="bg-sky-50 p-8 rounded-xl">
+          <h4 class="font-semibold text-xl text-sky-900 mb-3">Seamless Integration</h4>
+          <p class="text-gray-600">Works with major LLM providers and connects to your private knowledge bases.</p>
+        </div>
+        <div class="bg-sky-50 p-8 rounded-xl">
+          <h4 class="font-semibold text-xl text-sky-900 mb-3">Full Transparency</h4>
+          <p class="text-gray-600">Provides clear, document-linked justifications for every verified claim.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulting Section -->
+  <section id="consulting" class="py-20 sm:py-24 px-4 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center lg:text-right lg:w-2/3 ml-auto mb-12">
+        <h2 class="text-xs uppercase font-semibold text-amber-600 tracking-widest">Service</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4">Strategic AI Consulting</h3>
+        <p class="text-lg text-gray-600">Get expert guidance on your AI journey. We audit your systems, design custom solutions, and help you implement robust, high-performing AI that delivers real business value.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-amber-50 p-8 rounded-xl shadow-sm">
+          <h4 class="font-semibold text-xl text-amber-900 mb-3">AI Systems Audit</h4>
+          <p class="text-gray-600">A comprehensive evaluation of your existing AI infrastructure, models, and data pipelines.</p>
+        </div>
+        <div class="bg-amber-50 p-8 rounded-xl shadow-sm">
+          <h4 class="font-semibold text-xl text-amber-900 mb-3">Custom Solution Design</h4>
+          <p class="text-gray-600">We design tailored AI solutions that align with your business goals, including custom R&D.</p>
+        </div>
+        <div class="bg-amber-50 p-8 rounded-xl shadow-sm">
+          <h4 class="font-semibold text-xl text-amber-900 mb-3">Implementation & Deployment</h4>
+          <p class="text-gray-600">We guide you through the entire implementation process to ensure seamless integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-white">
+    <div class="max-w-7xl mx-auto py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <div class="relative rounded-2xl shadow-xl overflow-hidden">
+        <div class="absolute inset-0">
+          <img class="h-full w-full object-cover" src="assets/back_b0.jpg" alt="Abstract background with orange and blue waves">
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-slate-900/30"></div>
+        </div>
+        <div class="relative px-8 py-20 lg:w-1/2">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white tracking-tight">How can we assist you today?</h2>
+          <p class="mt-6 text-xl text-gray-200">Learn more about our core areas of expertise, or contact us to discuss your project.</p>
+          <a href="mailto:info@tensorsearch.com" class="mt-10 inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md transition-transform hover:scale-105">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+      <div class="flex items-center space-x-3">
+        <img src="logo.svg" alt="TensorSearch logo" class="h-6 w-auto opacity-70"/>
+        <span class="font-semibold">TensorSearch</span>
+      </div>
+      <p class="text-sm">&copy; 2025 TensorSearch. All rights reserved.</p>
+      <nav class="flex space-x-6">
+        <a href="#product" class="hover:text-white">Product</a>
+        <a href="#consulting" class="hover:text-white">Consulting</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    toggle.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => mobileNav.classList.add('hidden'));
+    });
+  </script>
 </body>
 </html>
