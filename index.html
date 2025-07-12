@@ -23,6 +23,17 @@
   <meta property="twitter:description" content="TensorSearch provides AI-powered fact-checking (FactCheck) and strategic consulting for Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems.">
   <meta property="twitter:image" content="https://tensorsearch.com/assets/back_b1.jpg">
   
+  <script>
+    (function() {
+      const langPreference = localStorage.getItem('user_lang_preference');
+      if (!langPreference) {
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.toLowerCase().startsWith('ru')) {
+          window.location.href = 'ru/index.html';
+        }
+      }
+    })();
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- JSON-LD Structured Data -->
@@ -62,6 +73,9 @@
     ]
   }
   </script>
+
+  <!-- Yandex verification -->
+  <meta name="yandex-verification" content="3bf2c03e5939de66" />
 </head>
 <body class="font-sans text-gray-800 bg-white">
   <!-- Header -->
@@ -218,17 +232,34 @@
     </div>
   </section>
 
+  <!-- Career -->
+  <section id="career" class="bg-gray-50 py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Join Our Mission</h2>
+      <p class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">We are always looking for passionate people to join our team and help build the future of trustworthy AI. If you're interested in working with us, we'd love to hear from you.</p>
+      <p class="mt-8 text-lg">
+        Please get in touch via email: <a href="mailto:info@tensorsearch.com" class="font-semibold text-indigo-600 hover:text-indigo-500">info@tensorsearch.com</a>
+      </p>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-400">
     <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-      <div class="flex items-center space-x-3">
+      <div class="flex items-center space-x-4">
         <img src="logo.svg" alt="TensorSearch logo" class="h-6 w-auto opacity-70"/>
         <span class="font-semibold">TensorSearch</span>
+        <div class="pl-4 border-l border-gray-600 space-x-2 text-sm">
+          <span class="font-bold text-white">EN</span>
+          <span>/</span>
+          <a href="ru/index.html" onclick="localStorage.setItem('user_lang_preference', 'ru')" class="hover:text-white">RU</a>
+        </div>
       </div>
       <p class="text-sm">&copy; 2025 TensorSearch. All rights reserved.</p>
       <nav class="flex space-x-6">
         <a href="#product" class="hover:text-white">Product</a>
         <a href="#consulting" class="hover:text-white">Consulting</a>
+        <a href="#career" class="hover:text-white">Careers</a>
       </nav>
     </div>
   </footer>

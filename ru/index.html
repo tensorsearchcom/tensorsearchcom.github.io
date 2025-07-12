@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>TensorSearch | Фактчекинг, RAG и Консалтинг по LLM</title>
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="TensorSearch предлагает решения для проверки фактов на базе ИИ (FactCheck) и стратегический консалтинг по большим языковым моделям (LLM) и системам Retrieval-Augmented Generation (RAG). Мы помогаем укрепить доверие и точность в корпоративных ИИ-системах.">
+  <meta name="keywords" content="ИИ консалтинг, LLM, RAG, Проверка фактов, Фактчекинг, Аудит ИИ, Корпоративный ИИ, TensorSearch, ИИ Кибербезопасность, Retrieval-Augmented Generation">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tensorsearch.com/ru/">
+  <meta property="og:title" content="TensorSearch | Фактчекинг, RAG и Консалтинг по LLM">
+  <meta property="og:description" content="TensorSearch предлагает решения для проверки фактов на базе ИИ (FactCheck) и стратегический консалтинг по большим языковым моделям (LLM) и системам Retrieval-Augmented Generation (RAG).">
+  <meta property="og:image" content="https://tensorsearch.com/assets/back_b1.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:url" content="https://tensorsearch.com/ru/">
+  <meta property="twitter:title" content="TensorSearch | Фактчекинг, RAG и Консалтинг по LLM">
+  <meta property="twitter:description" content="TensorSearch предлагает решения для проверки фактов на базе ИИ (FactCheck) и стратегический консалтинг по большим языковым моделям (LLM) и системам Retrieval-Augmented Generation (RAG).">
+  <meta property="twitter:image" content="https://tensorsearch.com/assets/back_b1.jpg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TensorSearch",
+    "url": "https://tensorsearch.com/ru/",
+    "logo": "https://tensorsearch.com/logo.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@tensorsearch.com",
+      "contactType": "Sales"
+    },
+    "description": "TensorSearch специализируется на построении доверия и точности в ИИ-системах с помощью передовых продуктов для проверки фактов и стратегического консалтинга по LLM и RAG.",
+    "knowsAbout": ["Искусственный интеллект", "Большие языковые модели", "Retrieval-Augmented Generation", "Проверка фактов", "Кибербезопасность"],
+    "service": [
+      {
+        "@type": "Service",
+        "name": "FactCheck для Бизнеса",
+        "description": "Автоматизированная система верификации, которая сверяет ответы, сгенерированные LLM, с исходными документами для обеспечения точности и построения доверия в RAG-процессах.",
+        "provider": {
+          "@type": "Organization",
+          "name": "TensorSearch"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Стратегический ИИ-консалтинг",
+        "description": "Экспертное руководство по внедрению ИИ, от аудита систем до реализации надежных, масштабируемых и заслуживающих доверия ИИ-решений.",
+        "provider": {
+          "@type": "Organization",
+          "name": "TensorSearch"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Header -->
+  <header class="sticky top-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <a href="#" class="flex items-center space-x-3">
+        <img src="/logo.svg" alt="Логотип TensorSearch" class="h-8 w-auto"/>
+        <span class="font-semibold text-2xl text-gray-800">TensorSearch</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-10 text-lg">
+        <a href="#product" class="hover:text-sky-600">Продукт</a>
+        <a href="#consulting" class="hover:text-amber-600">Консалтинг</a>
+        <a href="#contact" class="hover:text-indigo-600">Контакты</a>
+      </nav>
+      <button id="nav-toggle" class="md:hidden p-2 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile nav -->
+    <div id="mobile-nav" class="md:hidden hidden border-t border-gray-100">
+      <div class="px-5 py-4 space-y-2">
+        <a href="#product" class="mobile-nav-link block py-2 hover:text-indigo-600">Продукт</a>
+        <a href="#consulting" class="mobile-nav-link block py-2 hover:text-indigo-600">Консалтинг</a>
+        <a href="#contact" class="mobile-nav-link block py-2 hover:text-indigo-600">Контакты</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Expertise -->
+  <section class="bg-gray-50 py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl sm:text-6xl font-bold text-gray-900 mb-6 tracking-tight">Создавая доверие к ИИ</h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto text-gray-600">Мы предоставляем передовые инструменты и экспертное руководство, чтобы ваши ИИ-системы были точными, надежными и соответствовали вашим бизнес-целям.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8">
+        <!-- Left Card (Team Background) -->
+        <div class="lg:col-span-3 rounded-2xl shadow-xl overflow-hidden text-white p-10 flex flex-col justify-between min-h-[480px] bg-cover bg-center" style="background-image: url('/assets/back_b1.jpg');">
+          <div>
+            <h2 class="text-xs uppercase font-semibold tracking-widest opacity-80">Команда экспертов</h2>
+            <p class="text-4xl font-bold mt-4">Опираясь на мировые исследования в области ИИ</p>
+          </div>
+          <p class="text-lg mt-4">Наша экспертиза основана на академической строгости ведущих ИИ-институтов, таких как Сколтех и Научно-исследовательский институт искусственного интеллекта (AIRI).</p>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="lg:col-span-2 flex flex-col gap-8">
+          <!-- Expertise Card -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col">
+            <h2 class="text-xs uppercase font-semibold text-gray-600 tracking-widest">Наша экспертиза</h2>
+            <h3 class="text-2xl font-bold text-gray-900 mt-3 mb-4">Ключевые компетенции</h3>
+            <ul class="space-y-5 text-gray-700 flex-grow pt-4 text-lg">
+              <li class="flex items-start">
+                <svg class="h-7 w-7 flex-shrink-0 text-sky-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" /></svg>
+                <span>Большие языковые модели (LLM) и NLP</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-7 w-7 flex-shrink-0 text-sky-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+                <span>Retrieval-Augmented Generation (RAG)</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-7 w-7 flex-shrink-0 text-sky-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>Аудит ИИ-систем</span>
+              </li>
+              <li class="flex items-start">
+                  <svg class="h-7 w-7 flex-shrink-0 text-sky-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
+                <span>ИИ для кибербезопасности</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Project Card -->
+          <div class="bg-gray-800 text-white rounded-2xl shadow-xl p-8">
+            <h2 class="text-xs uppercase font-semibold tracking-widest text-gray-400">TensorSearch в действии</h2>
+            <h3 class="text-2xl font-bold mt-3 mb-4">Кибербезопасность на базе ИИ</h3>
+            <p class="text-gray-300">Мы помогаем разрабатывать ИИ-ассистента нового поколения для кибербезопасности. Свяжитесь с нами, чтобы узнать больше о нашем подходе к критически важным ИИ-системам.</p>
+            <a href="#contact" class="inline-block font-semibold text-amber-400 hover:text-amber-300 mt-4">
+              Свяжитесь с нами, чтобы узнать больше →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section (FactCheck) -->
+  <section id="product" class="py-20 sm:py-24 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center lg:text-left lg:w-2/3 mb-12">
+        <h2 class="text-xs uppercase font-semibold text-sky-600 tracking-widest">Продукт</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4">FactCheck для Бизнеса</h3>
+        <p class="text-lg text-gray-600">Автоматизируйте контроль качества для ваших LLM-приложений. Наш инструмент проверяет сгенерированный контент по исходным документам, чтобы исключить галлюцинации и укрепить доверие пользователей.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-sky-50 p-8 rounded-xl">
+          <h4 class="font-semibold text-xl text-sky-900 mb-3">Ускорение RAG</h4>
+          <p class="text-gray-600">Исключите трудоемкую ручную проверку фактов и верификацию, чтобы ускорить ваши рабочие процессы.</p>
+        </div>
+        <div class="bg-sky-50 p-8 rounded-xl">
+          <h4 class="font-semibold text-xl text-sky-900 mb-3">Бесшовная интеграция</h4>
+          <p class="text-gray-600">Работает с основными поставщиками LLM и подключается к вашим частным базам знаний.</p>
+        </div>
+        <div class="bg-sky-50 p-8 rounded-xl">
+          <h4 class="font-semibold text-xl text-sky-900 mb-3">Полная прозрачность</h4>
+          <p class="text-gray-600">Предоставляет четкие, связанные с документами обоснования для каждого проверенного утверждения.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulting Section -->
+  <section id="consulting" class="py-20 sm:py-24 px-4 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center lg:text-right lg:w-2/3 ml-auto mb-12">
+        <h2 class="text-xs uppercase font-semibold text-amber-600 tracking-widest">Сервис</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4">Стратегический ИИ-консалтинг</h3>
+        <p class="text-lg text-gray-600">Получите экспертное руководство на вашем пути к ИИ. Мы проводим аудит ваших систем, разрабатываем индивидуальные решения и помогаем внедрять надежный, высокопроизводительный ИИ, который приносит реальную пользу бизнесу.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-amber-50 p-8 rounded-xl shadow-sm">
+          <h4 class="font-semibold text-xl text-amber-900 mb-3">Аудит ИИ-систем</h4>
+          <p class="text-gray-600">Комплексная оценка вашей существующей ИИ-инфраструктуры, моделей и конвейеров данных.</p>
+        </div>
+        <div class="bg-amber-50 p-8 rounded-xl shadow-sm">
+          <h4 class="font-semibold text-xl text-amber-900 mb-3">Разработка индивидуальных решений</h4>
+          <p class="text-gray-600">Мы разрабатываем индивидуальные ИИ-решения, которые соответствуют вашим бизнес-целям, включая заказные НИОКР.</p>
+        </div>
+        <div class="bg-amber-50 p-8 rounded-xl shadow-sm">
+          <h4 class="font-semibold text-xl text-amber-900 mb-3">Внедрение и развертывание</h4>
+          <p class="text-gray-600">Мы сопровождаем вас на протяжении всего процесса внедрения, чтобы обеспечить бесшовную интеграцию.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-white">
+    <div class="max-w-7xl mx-auto py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <div class="relative rounded-2xl shadow-xl overflow-hidden">
+        <div class="absolute inset-0">
+          <img class="h-full w-full object-cover" src="/assets/back_b0.jpg" alt="Абстрактный фон с оранжевыми и синими волнами">
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-slate-900/30"></div>
+        </div>
+        <div class="relative px-8 py-20 lg:w-1/2">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white tracking-tight">Как мы можем вам помочь?</h2>
+          <p class="mt-6 text-xl text-gray-200">Узнайте больше о наших ключевых областях экспертизы или свяжитесь с нами, чтобы обсудить ваш проект.</p>
+          <a href="mailto:info@tensorsearch.com" class="mt-10 inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md transition-transform hover:scale-105">
+            Свяжитесь с нами
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career -->
+  <section id="career" class="bg-gray-50 py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Присоединяйтесь к нашей миссии</h2>
+      <p class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">Мы всегда ищем увлеченных людей, которые присоединятся к нашей команде и помогут строить будущее заслуживающего доверия ИИ. Если вы заинтересованы в работе с нами, мы будем рады получить от вас весточку.</p>
+      <p class="mt-8 text-lg">
+        Пожалуйста, свяжитесь с нами по электронной почте: <a href="mailto:info@tensorsearch.com" class="font-semibold text-indigo-600 hover:text-indigo-500">info@tensorsearch.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+      <div class="flex items-center space-x-4">
+        <img src="/logo.svg" alt="Логотип TensorSearch" class="h-6 w-auto opacity-70"/>
+        <span class="font-semibold">TensorSearch</span>
+        <div class="pl-4 border-l border-gray-600 space-x-2 text-sm">
+          <a href="/" onclick="localStorage.setItem('user_lang_preference', 'en')" class="hover:text-white">EN</a>
+          <span>/</span>
+          <span class="font-bold text-white">RU</span>
+        </div>
+      </div>
+      <p class="text-sm">&copy; 2025 TensorSearch. Все права защищены.</p>
+      <nav class="flex space-x-6">
+        <a href="#product" class="hover:text-white">Продукт</a>
+        <a href="#consulting" class="hover:text-white">Консалтинг</a>
+        <a href="#career" class="hover:text-white">Карьера</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    toggle.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => mobileNav.classList.add('hidden'));
+    });
+  </script>
+</body>
+</html> 
